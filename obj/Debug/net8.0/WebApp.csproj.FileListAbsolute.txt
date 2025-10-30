@@ -85,3 +85,4 @@ F:\Users\virys\RiderProjects\WebApp\WebApp\obj\Debug\net8.0\refint\WebApp.dll
 F:\Users\virys\RiderProjects\WebApp\WebApp\obj\Debug\net8.0\WebApp.pdb
 F:\Users\virys\RiderProjects\WebApp\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 F:\Users\virys\RiderProjects\WebApp\WebApp\obj\Debug\net8.0\ref\WebApp.dll
+F:\Users\virys\RiderProjects\WebApp\WebApp\obj\Debug\net8.0\WebApp.sourcelink.json
