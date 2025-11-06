@@ -1,0 +1,49 @@
+# === Build artifacts ===
+bin/
+obj/
+Debug/
+Release/
+
+# === Rider / JetBrains IDE ===
+.idea/
+*.sln.iml
+*.user
+*.suo
+
+# === Visual Studio / VSCode cache ===
+.vs/
+.vscode/
+*.cache
+*.log
+
+# === NuGet ===
+*.nupkg
+*.snupkg
+project.assets.json
+project.nuget.cache
+*.nuget.*
+
+# === Temporary files ===
+*.tmp
+*.temp
+*.bak
+*.old
+
+# === Compiled output ===
+*.dll
+*.exe
+*.pdb
+*.dbmdl
+
+# === ASP.NET specific ===
+appsettings.*.local.json
+Properties/launchSettings.json
+
+# === System ===
+Thumbs.db
+.DS_Store
+
+# === HTTP client requests ===
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
