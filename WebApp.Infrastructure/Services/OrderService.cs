@@ -44,7 +44,7 @@ namespace WebApp.Infrastructure.Services
                 .FirstOrDefaultAsync(o => o.Id == id);
 
             if (order == null)
-                _logger.LogWarning("Заказ с ID {OrderId} не найден", id);
+                _logger.LogWarning("Заказ с ID {OrderId} ненайден", id);
 
             return order;
         }

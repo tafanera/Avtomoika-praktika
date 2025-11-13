@@ -32,7 +32,7 @@ namespace WebApp.Controllers
             if (car == null)
             {
                 _logger.LogWarning("Попытка получить несуществующий автомобиль с ID {CarId}", id);
-                return NotFound(new { message = "Автомобиль не найден" });
+                return NotFound(new { message = "Автомобиль не был найден" });
             }
 
             return Ok(car);
