@@ -29,7 +29,7 @@ namespace WebApp.Infrastructure.Services
         {
             var car = await _context.Cars.Include(c => c.User).AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
             if (car == null)
-                _logger.LogWarning("Автомобиль с ID {CarId} не найден", id);
+                _logger.LogWarning("Автомобиль с ID {CarId} ненайден", id);
             return car;
         }
 

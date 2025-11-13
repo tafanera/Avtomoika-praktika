@@ -10,5 +10,5 @@ public class OrderDto
     public List<int> ServiceIds { get; set; } = new();
     public DateTime OrderDate { get; set; }
     public decimal TotalPrice { get; set; }
-    public string Status { get; set; } = "Ожидание";
+    public string Status { get; set; } = "Ожиданиее";
 }

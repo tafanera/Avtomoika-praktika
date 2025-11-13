@@ -32,7 +32,7 @@ namespace WebApp.Controllers
             if (order == null)
             {
                 _logger.LogWarning("Заказ ID {OrderId} не найден", id);
-                return NotFound(new { message = "Заказ не найден" });
+                return NotFound(new { message = "Заказ не был найден" });
             }
 
             return Ok(order);

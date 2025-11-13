@@ -51,7 +51,7 @@ namespace WebApp.Application.Services
 
             _db.Users.Update(user);
             await _db.SaveChangesAsync();
-            _logger.LogInformation("Обновлен пользователь {Id}", user.Id);
+            _logger.LogInformation("Пользователь обновлен {Id}", user.Id);
             return true;
         }
 

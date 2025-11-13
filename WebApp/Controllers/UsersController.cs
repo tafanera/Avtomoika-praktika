@@ -32,7 +32,7 @@ namespace WebApp.Controllers
             if (user == null)
             {
                 _logger.LogWarning("Пользователь ID {UserId} не найден", id);
-                return NotFound(new { message = "Пользователь не найден" });
+                return NotFound(new { message = "Пользователь не был найден" });
             }
 
             return Ok(user);
