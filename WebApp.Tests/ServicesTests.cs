@@ -19,7 +19,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task GetById_ReturnsServiceWithPrice()
+    public async Task GetById_Returns_Service_With_Price()
     {
         var service = new Service
         {
@@ -41,7 +41,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task Create_ReturnsCreatedService()
+    public async Task Create_Returns_Created_Service()
     {
         var newService = new Service
         {
@@ -61,7 +61,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task GetAll_ReturnsServiceList()
+    public async Task GetAll_Returns_Service_List()
     {
         _mockService.Setup(s => s.GetAllAsync()).ReturnsAsync(new List<Service>
         {
@@ -77,7 +77,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task GetById_ReturnsNotFound_WhenMissing()
+    public async Task GetById_Returns_Not_Found_When_Missing()
     {
         _mockService.Setup(s => s.GetByIdAsync(55)).ReturnsAsync((Service?)null);
 
@@ -87,7 +87,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task Update_ReturnsBadRequest_WhenIdMismatch()
+    public async Task Update_Returns_BadRequest_When_Id_Mismatch()
     {
         var service = new Service { Id = 3 };
 
@@ -97,7 +97,7 @@ public class ServiceControllerTests
     }
 
     [Fact]
-    public async Task Delete_ReturnsNotFound_WhenServiceNotExists()
+    public async Task Delete_Returns_NotFound_When_Service_Not_Exists()
     {
         _mockService.Setup(s => s.DeleteAsync(10)).ReturnsAsync(false);
 

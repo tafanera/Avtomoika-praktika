@@ -20,7 +20,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test1()
+    public async Task OrderCreate_With_Valid_Data()
     {
         var order = new Order
         {
@@ -49,7 +49,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test2()
+    public async Task Order_Changing_ServiceId()
     {
         var dto = new OrderDto
         {
@@ -78,7 +78,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test3()
+    public async Task Order_Changing_UserId()
     {
         _mockService.Setup(s => s.GetAllAsync()).ReturnsAsync(new List<Order>
         {
@@ -94,7 +94,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test4()
+    public async Task Order_Changing_TotalPrice()
     {
         var order = new Order { Id = 3, UserId = 2, CarId = 1 };
 
@@ -106,7 +106,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test5()
+    public async Task Order_Should_Store_Date_Correctly()
     {
         _mockService.Setup(s => s.GetByIdAsync(77)).ReturnsAsync((Order?)null);
 
@@ -116,7 +116,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test6()
+    public async Task Order_Should_Allow_Negative_TotalPrice()
     {
         var order = new Order { Id = 99 };
 
@@ -126,7 +126,7 @@ public class OrderControllerTests
     }
 
     [Fact]
-    public async Task Order_Test7()
+    public async Task Order_Should_Allow_Default_Date()
     {
         _mockService.Setup(s => s.DeleteAsync(33)).ReturnsAsync(false);
 

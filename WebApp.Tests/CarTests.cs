@@ -5,7 +5,7 @@ public class CarTests
 {
 
     [Fact]
-    public void Car_Test1()
+    public void Car_Create_With_Valid_Data()
     {
         var car = new Car
         {
@@ -22,7 +22,7 @@ public class CarTests
     }
 
     [Fact]
-    public void Car_Test2()
+    public void Car_Changing_Brand()
     {
         var car = new Car { Marka = "Лада" };
         car.Marka = "БМВ";
@@ -30,7 +30,7 @@ public class CarTests
     }
 
     [Fact]
-    public void Car_Test3()
+    public void Car_Changing_Model()
     {
         var car = new Car { Model = "X3" };
         car.Model = "X5";
@@ -38,7 +38,7 @@ public class CarTests
     }
 
     [Fact]
-    public void Car_Test4()
+    public void Car_Changing_Number()
     {
         var car = new Car { Number = "В998МК" };
         car.Number = "М228КС";
@@ -46,7 +46,7 @@ public class CarTests
     }
 
     [Fact]
-    public void Car_Test5()
+    public void Car_Should_Store_All_Fields_Correctly()
     {
         var car = new Car
         {
@@ -63,21 +63,21 @@ public class CarTests
     }
 
     [Fact]
-    public void Car_Test6()
+    public void Car_Null_Brand()
     {
         var car = new Car { Marka = null };
         Assert.Null(car.Marka);
     }
 
     [Fact]
-    public void Car_Test7()
+    public void Car_Null_Model()
     {
         var car = new Car { Model = null };
         Assert.Null(car.Model);
     }
 
     [Fact]
-    public void Car_Test8()
+    public void Car_Empty_PlateNumber()
     {
         var car = new Car { Number = "" };
         Assert.Equal("", car.Number);

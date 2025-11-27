@@ -19,7 +19,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test1()
+    public async Task User_Create_With_Valid_Data()
     {
         var user = new User
         {
@@ -44,7 +44,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test2()
+    public async Task User_Changing_Name()
     {
         var newUser = new User
         {
@@ -63,7 +63,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test3()
+    public async Task User_Changing_PhoneNumber()
     {
         _mockService.Setup(s => s.GetAllAsync()).ReturnsAsync(new List<User>
         {
@@ -79,7 +79,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test4()
+    public async Task User_Orders_Correctly()
     {
         _mockService.Setup(s => s.GetByIdAsync(55)).ReturnsAsync((User?)null);
 
@@ -89,7 +89,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test5()
+    public async Task User_Null_Name()
     {
         var user = new User { Id = 3 };
 
@@ -99,7 +99,7 @@ public class UsersControllerTests
     }
 
     [Fact]
-    public async Task Users_Test6()
+    public async Task Users_Empty_Number()
     {
         _mockService.Setup(s => s.DeleteAsync(10)).ReturnsAsync(false);
 
