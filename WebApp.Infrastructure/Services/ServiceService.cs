@@ -30,7 +30,7 @@ namespace WebApp.Infrastructure.Services
         {
             var service = await _context.Services.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
             if (service == null)
-                _logger.LogWarning("Услуга ID {ServiceId} не найдена", id);
+                _logger.LogWarning("Услуга ID {ServiceId} ненайдена", id);
             return service;
         }
 

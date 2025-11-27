@@ -32,7 +32,7 @@ namespace WebApp.Controllers
             if (service == null)
             {
                 _logger.LogWarning("Услуга ID {ServiceId} не найдена", id);
-                return NotFound(new { message = "Услуга не найдена" });
+                return NotFound(new { message = "Услуга не была найдена" });
             }
 
             return Ok(service);
